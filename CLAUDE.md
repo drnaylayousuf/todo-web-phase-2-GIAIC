@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- TypeScript 5.x (frontend), Python 3.13+ (backend) + Next.js 16+ with App Router, FastAPI, SQLModel, Better Auth, Tailwind CSS, Neon Serverless PostgreSQL (001-task-crud-auth)
+- PostgreSQL 16 database with Neon Serverless for production, Docker PostgreSQL for local development (001-task-crud-auth)
+
+## Recent Changes
+- 001-task-crud-auth: Added TypeScript 5.x (frontend), Python 3.13+ (backend) + Next.js 16+ with App Router, FastAPI, SQLModel, Better Auth, Tailwind CSS, Neon Serverless PostgreSQL
