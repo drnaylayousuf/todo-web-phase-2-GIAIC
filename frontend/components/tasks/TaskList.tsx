@@ -1,8 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, forwardRef, useImperativeHandle, ReactNode } from 'react';
 import TaskItem from './TaskItem';
 import { apiClient } from '@/lib/api-client';
+
+export interface TaskListRef {
+  refetch: () => void;
+}
 
 interface Task {
   id: number;
@@ -12,14 +16,6 @@ interface Task {
   user_id: string;
   created_at: string;
   updated_at: string;
-}
-
-import { useCallback } from 'react';
-
-import { forwardRef, useImperativeHandle } from 'react';
-
-export interface TaskListRef {
-  refetch: () => void;
 }
 
 const TaskList = forwardRef<TaskListRef>((props, ref) => {
@@ -128,3 +124,4 @@ const TaskList = forwardRef<TaskListRef>((props, ref) => {
 });
 
 export default TaskList;
+export { TaskList };
