@@ -1,6 +1,7 @@
 {
   "version": 2,
   "framework": "nextjs",
+  "root": ".",
   "functions": {
     "app/**/*": {
       "memory": 1024,
