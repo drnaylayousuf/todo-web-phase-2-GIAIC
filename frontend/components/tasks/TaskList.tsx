@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, forwardRef, useImperativeHandle, ReactNode } from 'react';
 import TaskItem from './TaskItem';
-import { apiClient } from '@/lib/api-client';
+import { apiClient } from '../../lib/api-client';
 
 export interface TaskListRef {
   refetch: () => void;
