@@ -40,3 +40,6 @@ Your application will be deployed and available at a URL like `https://your-app.
 ## Configuration
 
 The frontend expects the backend API to be available at the URL specified in the `NEXT_PUBLIC_API_BASE_URL` environment variable, with endpoints at `/api/auth` and `/api/tasks`.
+
+
+# // fix.
