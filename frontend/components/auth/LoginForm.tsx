@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { AuthCredentials, TokenResponse } from '../../lib/types';
-import { apiClient } from '../../lib/api-client';
+import { AuthCredentials, TokenResponse } from '@/lib/types';
+import { apiClient } from '@/lib/api-client';
 
 interface LoginFormProps {
   onLogin?: (token: string) => void;

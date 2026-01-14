@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { AuthCredentials } from '../../lib/types';
-import { apiClient } from '../../lib/api-client';
+import { AuthCredentials } from '@/lib/types';
+import { apiClient } from '@/lib/api-client';
 
 interface RegisterFormProps {
   onRegister?: (credentials: AuthCredentials) => void;
