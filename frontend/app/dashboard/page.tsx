@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import TaskList, { TaskListRef } from '../../components/tasks/TaskList';
-import TaskForm from '../../components/tasks/TaskForm';
+import TaskList, { TaskListRef } from '@/components/tasks/TaskList';
+import TaskForm from '@/components/tasks/TaskForm';
 
 export default function DashboardPage() {
   const [user, setUser] = useState<any>(null);
