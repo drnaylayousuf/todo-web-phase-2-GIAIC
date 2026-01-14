@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   experimental: {
     serverSourceMaps: true,
   },
+  // Explicitly define the basePath to ensure consistent path resolution
+  basePath: '',
+  // Ensure assetPrefix is empty to avoid conflicts
+  assetPrefix: '',
 };
 
 export default nextConfig;

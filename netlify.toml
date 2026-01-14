@@ -1,0 +1,13 @@
+[build]
+  base = "frontend"
+  publish = "frontend/.next"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_API_BASE_URL = "https://your-backend-domain.com/api"  # Replace with your actual backend API URL
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
