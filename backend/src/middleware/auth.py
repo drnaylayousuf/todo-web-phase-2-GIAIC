@@ -3,7 +3,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.exc import NoResultFound
 from typing import Optional
 from uuid import UUID
-import jwt
+from jose import jwt
 from sqlmodel import Session
 from ..config import settings
 from ..database import get_db_session

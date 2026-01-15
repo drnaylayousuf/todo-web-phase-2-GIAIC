@@ -35,7 +35,12 @@ def create_app():
     # Add CORS middleware - important for web interfaces
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],  # For Hugging Face Spaces
+        allow_origins=[
+            "http://localhost:3000",  # Local frontend development
+            "http://localhost:5173",  # Alternative local frontend
+            "https://todo-web-phase-2-giaic.vercel.app",  # Vercel deployed frontend
+            "https://nayla-yousuf-123-todo-web-app.hf.space"  # Hugging Face Space frontend
+        ],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
