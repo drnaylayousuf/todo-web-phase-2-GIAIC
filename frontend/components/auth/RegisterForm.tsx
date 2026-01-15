@@ -34,6 +34,13 @@ export default function RegisterForm({ onRegister }: RegisterFormProps) {
       return;
     }
 
+    // Validate password length (72 character max)
+    if (password.length > 72) {
+      setError('Password cannot be longer than 72 characters');
+      setLoading(false);
+      return;
+    }
+
     try {
       await apiClient.register(email, password);
 
@@ -87,8 +94,9 @@ export default function RegisterForm({ onRegister }: RegisterFormProps) {
           onChange={(e) => setPassword(e.target.value)}
           required
           minLength={8}
+          maxLength={72}
           className="w-full px-8 py-5 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-lg bg-white/90 text-gray-900"
-          placeholder="At least 8 characters"
+          placeholder="Between 8 and 72 characters"
           style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif" }}
         />
       </div>
